@@ -1,30 +1,111 @@
 <!doctype html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Latest compiled and minified CSS -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
     <!-- Optional theme -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
 
     <!-- Latest compiled and minified JavaScript -->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-        <title>assignment-4</title>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+    <title>assignment-4</title>
 
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-    </head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
 
-    <body>
-       <div class="outer-container">
-           
-       </div>
-        <script src="./js/main.js"></script>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="outer-container">
+        <header class="topBar">
+            <h1>This is going to be a paint app one day</h1>
+        </header>
+        <div class="inner-container">
+            <div id="dashboard" class="dashboard-container">
+                <div class="colors-container">
+
+                    <div class="color-stripe">
+                        <button style="background-color: black" class="color-circle">
+
+                        </button>
+                        <button style="background-color: orange" class="color-circle">
+
+                        </button>
+                        <button style="background-color: darkblue" class="color-circle">
+
+                        </button>
+                    </div>
+
+                    <div class="color-stripe">
+                        <button style="background-color: lime" class="color-circle">
+
+                        </button>
+                        <button style="background-color: purple" class="color-circle">
+
+                        </button>
+                        <button style="background-color: grey" class="color-circle">
+
+                        </button>
+                    </div>
+                    <div class="color-stripe">
+                        <button style="background-color: aqua" class="color-circle">
+
+                        </button>
+                        <button style="background-color: red" class="color-circle">
+
+                        </button>
+                        <button style="background-color: green" class="color-circle">
+
+                        </button>
+                    </div>
+                    <div class="color-stripe">
+                        <button style="background-color: blue" class="color-circle">
+
+                        </button>
+                        <button style="background-color: yellow" class="color-circle">
+
+                        </button>
+                        <button style="background-color: brown" class="color-circle">
+
+                        </button>
+                    </div>
+
+                </div>
+                <div class="tools-container">
+                    <div class="color-stripe">
+                        <button id="square" value="square" class="color-circle"><i value="square" class="fas fa-square-full"></i></button>
+                        <button id="circle" value="circle" class="color-circle"><i value="circle" class="fas fa-circle"></i></button>
+                        <button class="color-circle"><i class="fas fa-eraser"></i></button>
+                    </div>
+                    <div class="color-stripe">
+                        <button id="plus" value="+"class="color-circle">+</i></button>
+                        <button id="minus" value="-" class="color-circle">-</i></button>
+                        <button id="reset" class="color-circle"><i class="fas fa-redo-alt"></i></i></button>
+                    </div>
+                    <div class="color-stripe">
+                        <p>draw area size (px):</p>
+                        <input id="arenaSize" type="number" value="500px">
+                    </div>
+                </div>
+            </div>
+            <div id="drawArea" class="paint-area-container">
+
+            </div>
+        </div>
+        <footer class="bottomBar">
+
+        </footer>
+    </div>
+    <script src="./js/main.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https:///maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    </body>
+</body>
 
 </html>
