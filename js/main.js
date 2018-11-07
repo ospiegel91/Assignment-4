@@ -71,6 +71,17 @@ console.log(borderRadius);
 //This part works
 //end of handling of type square/circle variable
 
+//handling of eraser 
+var eraserButton = document.getElementById('eraser');
+eraserButton.addEventListener('click', makeWhite)
+function makeWhite(){
+    paintBrushProperties.color= eraserButton.value;
+}
+    
+
+//This part works
+//End of color handling variable
+
 //handling of color variable
 //This part works
 var colorButtons = document.querySelectorAll(".colors-container .color-circle");
@@ -115,10 +126,12 @@ function changeBrushSize(event) {
 
     if (event.target.value === "+") {
         currentSize = currentSize + 3;
-        return currentSize;
+        paintBrushProperties.height= currentSize+"px";
+        paintBrushProperties.width= currentSize+"px";
     } else {
         currentSize = currentSize - 3;
-        return currentSize;
+        paintBrushProperties.height= currentSize+"px";
+        paintBrushProperties.width= currentSize+"px";
     }
 
 };
@@ -144,8 +157,8 @@ function getPos(event) {
     var drawArea = document.querySelector('#drawArea');
     drawArea.appendChild(point);
 
-    point.style.height = "4px";
-    point.style.width = "4px";
+    point.style.height = paintBrushProperties.height;
+    point.style.width = paintBrushProperties.width;
     point.style.borderRadius = paintBrushProperties.type;
     point.style.backgroundColor = paintBrushProperties.color;
 
@@ -157,7 +170,7 @@ function getPos(event) {
     var paintArea = document.getElementById("drawArea");
     var canvasX = paintArea.getBoundingClientRect().x;
     var canvasY = paintArea.getBoundingClientRect().y;
-    point.style.left = (xVar) + 'px';
+    point.style.left = (xVar- canvasX) + 'px';
     point.style.top = (yVar - canvasY) + 'px';
 
 }
