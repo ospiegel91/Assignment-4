@@ -18,9 +18,12 @@ arena.style.width = arenaButton.value;
 arenaButton.addEventListener('keypress', changeArenaSize);
 
 function changeArenaSize(event) {
-    var arena = document.getElementById("drawArea");
-    arena.style.height = ((event.target.value) * 10) + "px";
-    arena.style.width = ((event.target.value) * 10) + "px";
+    if (event.keyCode == 13){
+        var arena = document.getElementById("drawArea");
+        arena.style.height = ((event.target.value)) + "px";
+        arena.style.width = ((event.target.value)) + "px";    
+    }
+    
 }
 //This part works
 //handling of arenaSize
@@ -93,11 +96,11 @@ for (var i = 0; i < colorButtons.length; i++) {
 var activeColor = "black";
 function changeColor(event) {
     if (typeof event === "undefined") {
-        paintBrushProperties.color = "black"
+        paintBrushProperties.color = "black";
     } else {
         var activeColor = event.target.style.backgroundColor;
         if (activeColor === "") {
-            paintBrushProperties.color = "black"
+            paintBrushProperties.color = "black";
         } else {
             paintBrushProperties.color = activeColor;
         }
@@ -185,6 +188,13 @@ function offFunction() {
 
 
 
+var colorPalletSubmit = document.getElementById("pallet");
+colorPalletSubmit.addEventListener('click', colorPalletChange);
+
+function colorPalletChange(){
+    paintBrushProperties.color = "#"+document.getElementById('palletColor').value;
+    
+}
 
 
 

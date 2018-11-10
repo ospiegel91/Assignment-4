@@ -26,87 +26,98 @@
 
 <body>
     <!-- <div class="outer-container"></div> -->
-        <!-- <div class="topBar">
+    <!-- <div class="topBar">
 
         </div> -->
 
-        <div id="dashboard" class="dashboard-container">
-            <div class="colors-container">
+    <div id="dashboard" class="dashboard-container">
+        <div class="colorPallet">
+            <h3>select color here:</h3>
+            <p>place curser inside box below</p>
+            <input id="palletColor" class="jscolor" value="ab2567">
+            <button id="pallet">Submit color</button>
+        </div>
+        <div class="colors-container">
 
-                <div class="color-stripe">
-                    <button style="background-color: black" class="color-circle">
+            <div class="color-stripe">
+                <button style="background-color: black" class="color-circle">
 
-                    </button>
-                    <button style="background-color: orange" class="color-circle">
+                </button>
+                <button style="background-color: orange" class="color-circle">
 
-                    </button>
-                    <button style="background-color: darkblue" class="color-circle">
+                </button>
+                <button style="background-color: darkblue" class="color-circle">
 
-                    </button>
-                </div>
-
-                <div class="color-stripe">
-                    <button style="background-color: lime" class="color-circle">
-
-                    </button>
-                    <button style="background-color: purple" class="color-circle">
-
-                    </button>
-                    <button style="background-color: grey" class="color-circle">
-
-                    </button>
-                </div>
-                <div class="color-stripe">
-                    <button style="background-color: aqua" class="color-circle">
-
-                    </button>
-                    <button style="background-color: red" class="color-circle">
-
-                    </button>
-                    <button style="background-color: green" class="color-circle">
-
-                    </button>
-                </div>
-                <div class="color-stripe">
-                    <button style="background-color: blue" class="color-circle">
-
-                    </button>
-                    <button style="background-color: yellow" class="color-circle">
-
-                    </button>
-                    <button style="background-color: brown" class="color-circle">
-
-                    </button>
-                </div>
-
+                </button>
             </div>
-            <div class="tools-container">
-                <div class="color-stripe">
-                    <button id="square" value="square" class="color-circle"><i value="square" class="fas fa-square-full"></i></button>
-                    <button id="circle" value="circle" class="color-circle"><i value="circle" class="fas fa-circle"></i></button>
-                    <button id="eraser" value="white" class="color-circle"><i class="fas fa-eraser"></i></button>
-                </div>
-                <div class="color-stripe">
-                    <button id="plus" value="+" class="color-circle">+</i></button>
-                    <button id="minus" value="-" class="color-circle">-</i></button>
-                    <button id="reset" class="color-circle"><i class="fas fa-redo-alt"></i></i></button>
-                </div>
-                <div class="color-stripe">
-                    <p class="text">Enter the desired canvas size square (px):</p>
-                    <input id="arenaSize" type="number" value="500px">
-                </div>
-            </div>
-            <div class="save-load">
 
+            <div class="color-stripe">
+                <button style="background-color: lime" class="color-circle">
+
+                </button>
+                <button style="background-color: purple" class="color-circle">
+
+                </button>
+                <button style="background-color: grey" class="color-circle">
+
+                </button>
+            </div>
+            <div class="color-stripe">
+                <button style="background-color: aqua" class="color-circle">
+
+                </button>
+                <button style="background-color: red" class="color-circle">
+
+                </button>
+                <button style="background-color: green" class="color-circle">
+
+                </button>
+            </div>
+            <div class="color-stripe">
+                <button style="background-color: blue" class="color-circle">
+
+                </button>
+                <button style="background-color: yellow" class="color-circle">
+
+                </button>
+                <button style="background-color: brown" class="color-circle">
+
+                </button>
+            </div>
+
+        </div>
+        <div class="tools-container">
+            <div class="color-stripe">
+                <button id="square" value="square" class="color-circle"><i value="square" class="fas fa-square-full"></i></button>
+                <button id="circle" value="circle" class="color-circle"><i value="circle" class="fas fa-circle"></i></button>
+                <button id="eraser" value="white" class="color-circle"><i class="fas fa-eraser"></i></button>
+            </div>
+            <div class="color-stripe">
+                <button id="plus" value="+" class="color-circle">+</i></button>
+                <button id="minus" value="-" class="color-circle">-</i></button>
+                <button id="reset" class="color-circle"><i class="fas fa-redo-alt"></i></i></button>
+            </div>
+            <div class="color-stripe">
+                <p class="text">Enter the desired canvas size square (px):</p>
+                <input id="arenaSize" type="number" value="500px">
             </div>
         </div>
-        <div class="inner-container">
-            <div id="drawArea" class="paint-area-container">
 
-            </div>
+    </div>
+    <div class="inner-container">
+        <div id="drawArea" class="paint-area-container">
+
         </div>
+        <div class="z">
+        </div>
+    </div>
+    <div class="saveBox">
+        <button id="save">Save</button>
+        <button id="load">Load</button>
+    </div>
     <!-- </div> -->
     <script src="./js/main.js"></script>
+    <script src="./js/jscolor.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https:///maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </body>

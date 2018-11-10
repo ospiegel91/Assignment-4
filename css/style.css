@@ -33,13 +33,13 @@ body{
     /* justify-content: space-evenly; */
     width: 100%;
     height: 84%;
-    background-color: black;
+    background-color: lightgray;
     position: relative;
     
 }
 
 .dashboard-container{
-    background-color: rgba(255, 255, 255, 0.979);
+    background-color: rgba(255, 255, 255, 0.86);
     /* opacity: 0.7; */
     border-bottom: black solid 2px;
     width: 100%;
@@ -90,17 +90,21 @@ body{
     border: black solid thin;
     font-size: 1.2em;
     margin: 7px 0%;
+    cursor: pointer;
     
 
 }
 .text{
     font-size: 1.25em;
     margin-bottom: 0px;
+    cursor: default;
 }
 .paint-area-container{
     background-color: white;
     width: 500px;
     height: 500px;
+    border-right: black 1px dotted;
+    border-bottom: black 1px dotted;
 }
 
 .bottomBar{
@@ -111,4 +115,64 @@ body{
 #arenaSize{
     width: 90px;
     margin: 0 20px;
+    
+}
+
+.colorPallet{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.colorPallet h3{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.colorPallet p{
+    margin-bottom: 2px;
+    margin-top: 2px;
+    font-size: 0.7em;
+}
+
+#palletColor{
+    width: 50px;
+    height: 20%;
+    margin: 2px 7px;
+    font-size: 0.8em;
+}
+
+#pallet{
+    font-family: 'Poor Story', cursive;
+    font-size: 1.1em;
+}
+
+.z{
+    width: 30%;
+    display: inline-block;
+    background-color: lightgrey;
+    z-index: 12;
+}
+
+.saveBox{
+    position: fixed;
+    width: 12%;
+    height: 16%;
+    right: 30px;
+    bottom: 15px;
+    background-color: black;
+    z-index: 123456;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.saveBox button{
+    margin: 5px;
+    height: 35%;
+    font-size: 1.75em;
+    font-family: 'Poor Story', cursive;
 }
