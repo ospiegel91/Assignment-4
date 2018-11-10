@@ -156,6 +156,13 @@ body{
     background-color: lightgrey;
     z-index: 12;
 }
+.z2{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: lightgrey;
+    z-index: 12;
+}
 
 .saveBox{
     position: fixed;

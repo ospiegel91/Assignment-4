@@ -198,8 +198,70 @@ function colorPalletChange(){
 
 
 
+//save functionality
+//This part works
+
+var saveButton = document.getElementById("save");
+saveButton.addEventListener('click', savePainting);
+
+function savePainting(){
+    var arena = document.getElementById("drawArea");
+    var arenaLeft = arena.getBoundingClientRect().left;
+    var arenaTop = arena.getBoundingClientRect().top;
+    var paintingObj = {};
+    paintingObj["pixels"] = [];
+    var allPixels = arena.getElementsByTagName('div');
+    for (var i = 0; i<allPixels.length; i++){
+        var currentPixel = allPixels[i];
+        var pixelObj = {};
+        pixelObj["color"] = currentPixel.style.backgroundColor;
+        pixelObj["height"] = currentPixel.style.height;
+        pixelObj["width"] = currentPixel.style.width;
+        pixelObj["border-radius"]= currentPixel.style.borderRadius;
+        pixelObj["top"] = currentPixel.getBoundingClientRect().top - arenaTop;
+        pixelObj["left"] = currentPixel.getBoundingClientRect().left - arenaLeft;
+        paintingObj["pixels"].push(pixelObj);
+    }
+localStorage.setItem('painting', JSON.stringify(paintingObj));
+alert('painting saved');
+
+};
+
+//This part works
+// end of save functionality
 
 
+//load functionality
+//This part works
 
-// var canvasX = paintarea.getBoundingClientRect().x.value;
-// var canvasY = paintarea.getBoundingClientRect().y.value;
+var loadButton = document.getElementById("load");
+loadButton.addEventListener('click', loadPainting);
+
+function loadPainting(){
+    var loadedPainting = localStorage.getItem('painting');
+    var paintingObj = JSON.parse(loadedPainting);
+    resetFunction()
+    var allPixels = paintingObj["pixels"];
+    for (var i = 0; i<allPixels.length; i++){
+        var currentPixel = allPixels[i];
+        var newPixel = document.createElement('div');
+        arena.appendChild(newPixel);
+        newPixel.style.backgroundColor = currentPixel["color"];
+        newPixel.style.position = "absolute";
+        newPixel.style.borderRadius = currentPixel["border-radius"];
+        newPixel.style.height = currentPixel["height"];
+        newPixel.style.width = currentPixel["width"];
+        newPixel.style.top = currentPixel["top"]+"px";
+        newPixel.style.left = currentPixel["left"]+"px";
+    }
+    
+    alert("painting loaded");
+};
+
+
+//This part works
+//end of load functionality
+
+arena.style.height = "500px";
+var bottomGrey = document.getElementsByClassName("z2");
+bottomGrey[0].style.height = (parseInt(arena.style.height)*5)+"px";
